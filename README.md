@@ -9,6 +9,10 @@ This repository contains scripts to set up two virtual machines (Ubuntu and Cent
 
 ## Scripts
 
+
+### 0. `install_kvm.sh`
+This script turns the host into a vm server which can be administered via virt-manager or the cli using virsh:
+
 ### 1. `create_vms.sh`
 This script creates two VMs:
 - **Ubuntu VM** (`ubuntu-vm`)
@@ -28,6 +32,8 @@ This script sets up an NFS server on the Ubuntu VM and mounts the NFS share on t
 
 ## Demonstration Guide
 
+    Install KVM on host:
+        Run install_kvm.sh.
     Create the VMs:
         Run create_vms.sh to set up both VMs.
     Setup SSH:
