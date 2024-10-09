@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Install KVM hypervisor on Ubuntu VM
+# Install KVM hypervisor on the host machine.
 ssh ubuntu-vm <<'EOF'
 # Step 1: Install KVM, libvirt, and related packages
 sudo apt update
