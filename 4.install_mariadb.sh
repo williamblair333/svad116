@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# Install MariaDB on CentOS VM
-ssh centos-vm <<'EOF'
+# Install MariaDB on Fedora 40 VM
+ssh fedora-vm <<'EOF'
 # Step 1: Install MariaDB
-sudo yum install -y mariadb-server mariadb
+sudo yum install --yes mariadb-server mariadb
 
 # Step 2: Enable and start MariaDB service
 sudo systemctl enable --now mariadb
@@ -20,7 +20,7 @@ y         # Reload privilege tables
 EOD
 
 # Step 4: Create test database and user
-mysql -uroot -ppassword <<EOD
+mysql --user=root --password=password <<EOD
 CREATE DATABASE testdb;
 CREATE USER 'testuser'@'localhost' IDENTIFIED BY 'testpass';
 GRANT ALL PRIVILEGES ON testdb.* TO 'testuser'@'localhost';

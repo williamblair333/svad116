@@ -8,7 +8,7 @@ VM_CENTOS="centos-vm"
 
 # Step 1: Generate SSH Key (if not already done)
 if [ ! -f ~/.ssh/id_rsa ]; then
-    ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa -N ""
+    ssh-keygen --type rsa --bits 4096 --file ~/.ssh/id_rsa -N ""
 fi
 
 # Step 2: Copy SSH Key to VMs for Passwordless SSH
