@@ -4,6 +4,7 @@
 #################################################################################
 git_push.sh
 
+.mp4/*
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
